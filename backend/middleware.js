@@ -1,4 +1,4 @@
-const { JWT_SECRET } = require("./config").default;
+const { JWT_SECRET } = 'suchitrasecret'
 const jwt = require("jsonwebtoken");
 
 const authMiddleware = (req, res, next) => {
