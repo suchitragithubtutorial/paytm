@@ -3,7 +3,7 @@ const router = express.Router();
 const zod = require("zod");
 const { User, Account } = require("../db");
 const jwt = require("jsonwebtoken");
-const { JWT_SECRET } = require("../config").default;
+const { JWT_SECRET } = 'suchitrasecret';
 const { authMiddleware } = require("../middleware");
 
 const signupBody = zod.object({
@@ -55,7 +55,7 @@ router.post("/signup",async(req , res) => {
 })
 
 const signinBody = zod.object({
-    username: zod.string.email(),
+   username: zod.string.email(),
     password: zod.string()
 })
 router.post("/signin",async(req , res) => {
